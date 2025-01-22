@@ -75,7 +75,7 @@ public class UserImplementation implements UserService {
 
     @Override
     public UserResponse updateUser(Long id, UserRequest userRequest) {
-        User users = userRepository.getUserById(id)
+        User users = userRepository.getUserById(id);
         if (users == null) {
             throw new ResourceNotFoundException("User with ID: " + id + " Not Found");
         }

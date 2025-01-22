@@ -9,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.github.javafaker.Faker;
+import com.librarybe.librarybe.entity.Category;
 import com.librarybe.librarybe.entity.User;
+import com.librarybe.librarybe.repository.CategoryRepository;
 import com.librarybe.librarybe.repository.UserRepository;
 
 @SpringBootApplication
@@ -17,6 +19,9 @@ public class LibrarybeApplication {
 
 	@Autowired
 	UserRepository userRepository;
+
+	@Autowired
+	CategoryRepository categoryRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(LibrarybeApplication.class, args);
@@ -32,6 +37,11 @@ public class LibrarybeApplication {
 						faker.phoneNumber().phoneNumber(),
 						faker.address().fullAddress());
 				userRepository.save(userSeed);
+			}
+
+			for (int i = 0; i < 5; i++) {
+				Category categorySeed = new Category(faker.book().genre());
+				categoryRepository.save(categorySeed);
 			}
 		};
 	}
