@@ -11,9 +11,11 @@ import org.springframework.context.annotation.Bean;
 import com.github.javafaker.Faker;
 import com.librarybe.librarybe.entity.Authors;
 import com.librarybe.librarybe.entity.Category;
+import com.librarybe.librarybe.entity.Publisher;
 import com.librarybe.librarybe.entity.User;
 import com.librarybe.librarybe.repository.AuthorsRepository;
 import com.librarybe.librarybe.repository.CategoryRepository;
+import com.librarybe.librarybe.repository.PublisherRepository;
 import com.librarybe.librarybe.repository.UserRepository;
 
 @SpringBootApplication
@@ -27,6 +29,9 @@ public class LibrarybeApplication {
 
 	@Autowired
 	AuthorsRepository authorsRepository;
+
+	@Autowired
+	PublisherRepository publisherRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(LibrarybeApplication.class, args);
@@ -52,6 +57,11 @@ public class LibrarybeApplication {
 			for (int i = 0; i < 10; i++) {
 				Authors authors = new Authors(faker.book().author());
 				authorsRepository.save(authors);
+			}
+
+			for (int i = 0; i < 10; i++) {
+				Publisher publisher = new Publisher(faker.book().publisher(), faker.address().fullAddress());
+				publisherRepository.save(publisher);
 			}
 		};
 	}
