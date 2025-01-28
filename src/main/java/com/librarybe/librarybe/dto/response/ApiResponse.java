@@ -1,4 +1,4 @@
-package com.librarybe.librarybe.controller.dto.response;
+package com.librarybe.librarybe.dto.response;
 
 public class ApiResponse<T> {
     private int status;

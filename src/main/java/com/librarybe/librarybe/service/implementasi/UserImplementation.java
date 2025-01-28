@@ -7,8 +7,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.librarybe.librarybe.controller.dto.request.UserRequest;
-import com.librarybe.librarybe.controller.dto.response.UserResponse;
+import com.librarybe.librarybe.dto.request.UserRequest;
+import com.librarybe.librarybe.dto.response.UserResponse;
 import com.librarybe.librarybe.entity.User;
 import com.librarybe.librarybe.exception.ResourceNotFoundException;
 import com.librarybe.librarybe.repository.UserRepository;

@@ -2,8 +2,8 @@ package com.librarybe.librarybe.service;
 
 import java.util.List;
 
-import com.librarybe.librarybe.controller.dto.request.PublisherRequest;
-import com.librarybe.librarybe.controller.dto.response.PublisherResponse;
+import com.librarybe.librarybe.dto.request.PublisherRequest;
+import com.librarybe.librarybe.dto.response.PublisherResponse;
 import com.librarybe.librarybe.entity.Publisher;
 
 public interface PublisherService {

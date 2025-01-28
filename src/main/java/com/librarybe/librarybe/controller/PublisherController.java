@@ -11,9 +11,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.librarybe.librarybe.controller.dto.request.PublisherRequest;
-import com.librarybe.librarybe.controller.dto.response.ApiResponse;
-import com.librarybe.librarybe.controller.dto.response.PublisherResponse;
+import com.librarybe.librarybe.dto.request.PublisherRequest;
+import com.librarybe.librarybe.dto.response.ApiResponse;
+import com.librarybe.librarybe.dto.response.PublisherResponse;
 import com.librarybe.librarybe.entity.Publisher;
 import com.librarybe.librarybe.service.PublisherService;
 

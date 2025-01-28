@@ -7,8 +7,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.librarybe.librarybe.controller.dto.request.CategoryRequest;
-import com.librarybe.librarybe.controller.dto.response.CategoryResponse;
+import com.librarybe.librarybe.dto.request.CategoryRequest;
+import com.librarybe.librarybe.dto.response.CategoryResponse;
 import com.librarybe.librarybe.entity.Category;
 import com.librarybe.librarybe.exception.ResourceNotFoundException;
 import com.librarybe.librarybe.repository.CategoryRepository;

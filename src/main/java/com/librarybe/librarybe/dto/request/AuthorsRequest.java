@@ -1,4 +1,4 @@
-package com.librarybe.librarybe.controller.dto.request;
+package com.librarybe.librarybe.dto.request;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
