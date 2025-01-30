@@ -3,6 +3,7 @@ package com.librarybe.librarybe.dto.request;
 import java.time.LocalDate;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import lombok.Data;
@@ -22,7 +23,12 @@ public class BookRequest {
 
     private LocalDate publishedAt;
 
-    private Integer authorId;
-    private Integer categoryId;
-    private Integer publisherId;
+    @NotNull(message = "Choose one author")
+    private Long authorId;
+
+    @NotNull(message = "Choose one category")
+    private Long categoryId;
+
+    @NotNull(message = "Choose one publisher")
+    private Long publisherId;
 }
